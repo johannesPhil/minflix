@@ -21,7 +21,8 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/_redirects"
             ],
             "styles": [
               "src/styles.css",
@@ -119,8 +120,17 @@
               "devServerTarget": "minflix:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/minflix",
+            "netlifyToken": "4ac320e83559648b842ea9585815aac1d08f92ec7d27edcdea157c7bb6abcbcd",
+            "siteId": "87698f9d-84d3-4365-930e-0eea458c91ba"
+          }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "minflix"
 }

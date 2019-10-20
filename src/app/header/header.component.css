@@ -1,0 +1,95 @@
+nav{
+    position:fixed;
+    width: 100%;
+    height: 8vh;
+    padding: 0 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #040707;
+    color: #fff;
+    font-family: 'Roboto';
+}
+
+#left{
+    display: flex;
+    align-items: center;
+}
+
+#logo{
+    font-size: 3em;
+}
+
+.min{
+    color: #ff2901;
+}
+.flix{
+    color: #fff;
+}
+#mini, #full{
+    color: #3b3c36;
+}
+
+form[name=search]{
+    width: 70%;
+    height: 2.5em;
+    margin: 0 5%;
+    padding: 20px;
+    background-color: #3b3c36;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 20px;
+}
+
+input[type=text]{
+    width: 95%;
+    height: 1.8em;
+    background-color: inherit;
+    border: none;
+    color: #fff;
+}
+
+::placeholder{
+    color: #fff;
+}
+:focus{
+    outline: none;
+}
+
+fa-icon:hover{
+    color:#ff2901;
+    cursor: pointer;
+}
+
+button[type=submit]{
+    height:1.8em;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+}
+
+@media screen and (min-width: 320px){
+    #full{
+        display: none;
+    }
+    #mini{
+        display: block;
+    }
+    input[type=text]{
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (min-width: 768px){
+    #mini{
+        display: none;
+    }
+    #full{
+        display: block;
+    }
+    input[type=text]{
+        font-size:1.2em; 
+    }
+}

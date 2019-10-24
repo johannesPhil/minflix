@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-moviecard',
@@ -8,9 +9,16 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
 })
 export class MoviecardComponent implements OnInit {
   faHeart = faHeart;
-  constructor() { }
+
+  movies;
+
+  constructor(private apiService: ApiService) { }
 
   ngOnInit() {
+
+    this.apiService.getMovie().subscribe((data) => {
+      this.movies = data['results'];
+    });
   }
 
 }

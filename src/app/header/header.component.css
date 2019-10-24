@@ -10,6 +10,7 @@ nav{
     background-color: #040707;
     color: #fff;
     font-family: 'Roboto';
+    z-index: 2;
 }
 
 #left{
@@ -32,23 +33,30 @@ nav{
 }
 
 form[name=search]{
-    width: 70%;
-    height: 2.5em;
+    width: 30vw;
+    height: 4vh;
     margin: 0 5%;
-    padding: 20px;
+    overflow: hidden;
     background-color: #3b3c36;
     display: flex;
     align-items: center;
+    font-size: .8em;
     justify-content: space-around;
     border-radius: 20px;
 }
 
 input[type=text]{
-    width: 95%;
-    height: 1.8em;
+    width: 90%;
+    height: inherit;
+    padding: 0 10px;
     background-color: inherit;
     border: none;
     color: #fff;
+    transition: 700ms ease;
+}
+
+input[type=text]:focus{
+    background-color: #ff2901;
 }
 
 ::placeholder{

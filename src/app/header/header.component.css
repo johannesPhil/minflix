@@ -1,3 +1,11 @@
+a{
+    color: #fff;
+}
+
+a:hover{
+    color:#ff2901;
+    cursor: pointer;
+}
 nav{
     position:fixed;
     width: 100%;
@@ -64,11 +72,6 @@ input[type=text]:focus{
 }
 :focus{
     outline: none;
-}
-
-fa-icon:hover{
-    color:#ff2901;
-    cursor: pointer;
 }
 
 button[type=submit]{

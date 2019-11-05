@@ -8,12 +8,17 @@
                 <span class="min">m</span>|<span class="flix">F</span>
             </div>
         </div>
-        <form action="" name="search" id="search">
-            <input type="text" name="movieSearch" id="searchBox" placeholder="Search Movie Title">
+        <form action="" name="search" id="search" [formGroup]="search">
+            <input type="text" name="movieSearch" id="searchButton" placeholder="Search Movie Title" formControlName="title">
             <button type="submit" id="search-btn" class="btn">
-                <fa-icon [icon]="faSearch" size="2x"></fa-icon>
+                <fa-icon [icon]="faSearch"></fa-icon>
             </button>
         </form>
     </div>
-    <fa-icon [icon]="faBookmark" size="2x"></fa-icon>
+    <a routerLink="favourite"  routerLinkActive="active">
+        <fa-icon [icon]="faBookmark" size="2x"></fa-icon>
+    </a>
+    <a routerLink="signin"  routerLinkActive="active">
+        <fa-icon [icon]="faSignIn"></fa-icon>
+    </a>
 </nav>

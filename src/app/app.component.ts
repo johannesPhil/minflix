@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { faSearch, faBookmark, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'minFlix';
+
+  faSearch = faSearch;
+  faBookmark = faBookmark;
+  faSignIn = faSignInAlt;
+
+  search = new FormGroup({
+    title: new FormControl('')
+  });
 }

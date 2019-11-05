@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { faSearch, faBookmark } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faBookmark, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-header',
@@ -10,8 +11,13 @@ export class HeaderComponent implements OnInit {
 
   faSearch = faSearch;
   faBookmark = faBookmark;
+  faSignIn = faSignInAlt;
 
   constructor() { }
+
+  search = new FormGroup({
+    title: new FormControl('')
+  });
 
   ngOnInit() {
   }

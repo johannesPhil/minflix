@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faSearch, faBookmark, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faHeart, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
@@ -10,7 +10,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class HeaderComponent implements OnInit {
 
   faSearch = faSearch;
-  faBookmark = faBookmark;
+  faHeart = faHeart;
   faSignIn = faSignInAlt;
 
   constructor() { }

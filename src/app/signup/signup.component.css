@@ -1,0 +1,74 @@
+#container{
+    width: 100%;
+    height: 100vh;
+    background-image: url('/assets/images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    
+}
+
+#form-wrapper{
+    position: relative;
+    width: 550px;
+    height: auto;
+    padding: 5%;
+    margin:auto;
+}
+
+#form-wrapper:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #040707;
+    filter: opacity(85%);
+}
+
+form[name=signin]{
+    position: relative;
+    display: block;
+    width: 100%;
+    font-size: 1.2em;
+    color: #fff;
+    z-index: 1;
+}
+
+form[name=signin] input{
+    display: block;
+    width: 100%;
+    height: 2em;
+    margin: 5% 0;
+    padding: 0 2.5%;
+    background-color: rgba(59, 60, 54);
+    border-radius: 5px;
+    border: none;
+    font-size: 1.1em;
+    transition: ease-in-out 500ms;
+}
+
+form[name=signin] input:focus{
+    background-color: #fff;
+    outline: none;
+}
+
+span.error{
+    display: block;
+     color: rgba(255, 0, 0, 0.897);
+     font-size:.9em;
+}
+
+form[name=signin] input[type=submit]{
+    height: 2.5em;
+    background-color: teal;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+form[name=signin] input[type=submit]:hover{
+    background-color: #fff;
+    color: teal;
+}

@@ -1,1 +1,13 @@
-<p>signin works!</p>
+<div class="form-body">
+    <div class="form-wrapper">
+        <form action="" [formGroup]="signIn" name="signin" id="signin">
+            <h2 class="form-title">Sign In</h2>
+            <label for="mail">Email Address</label>
+            <input type="email" name="mail" id="mail" class="form-element" formControlName="mail" placeholder="Email Address">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="form-element" formControlName="password" placeholder="Password">
+            <input type="submit" value="Sign In" class="form-element form-button"/>
+            <p class="form-text">Don't have an account?&nbsp;&nbsp;<a routerLink="/signup">Sign Up here</a></p>
+        </form>
+    </div>
+</div>

@@ -1,1 +1,24 @@
-<p>signup works!</p>
+<div class="form-body">
+    <div class="form-wrapper">
+        <form *ngIf="signUpForm" [formGroup]="signUpForm" id="signup" name="signup">
+            <h2 class="form-title">Create an Account</h2>
+            <label for="name">Full Name</label>
+            
+            <input type="text" name="name" id="name" class="form-element" formControlName="name">
+            <span class="error" *ngIf="signUpForm.controls.name.errors">{{signUpForm.controls.name["errorMessage"]}}</span>
+
+            <label for="mail">Email Address</label>
+            <input type="email" name="mail" id="mail" class="form-element" formControlName="mail">
+            <span class="error" *ngIf="signUpForm.controls.mail.errors">{{signUpForm.controls.mail["errorMessage"]}}</span>
+
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="form-element" formControlName="password">
+            <span class="error" *ngIf="signUpForm.controls.password.errors">{{signUpForm.controls.password["errorMessage"]}}</span>
+
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" name="confirm-password" id="confirm-password" class="form-element" formControlName="confirmPassword">
+            <span class="error" *ngIf="signUpForm.controls.confirmPassword.errors">{{signUpForm.controls.confirmPassword["errorMessage"]}}</span>
+            <input type="submit" value="Sign In" class="form-element form-button"/>
+        </form>
+    </div>
+</div>

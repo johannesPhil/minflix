@@ -1,7 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { environment } from '../environments/environment';
+import { AuthenticationService } from './authentication.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,9 +38,14 @@ import { FavouriteComponent } from './favourite/favourite.component';
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    ReactiveFormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    RxReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig, 'minflix'),
+    AngularFirestoreModule, // Only required for database features
+    AngularFireStorageModule // Only required for storage features
   ],
-  providers: [],
+  providers: [AuthenticationService],
   // tslint:disable-next-line: max-line-length
   bootstrap: [AppComponent]
 })

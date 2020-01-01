@@ -13,7 +13,8 @@
                         Runtime: {{movieDetails.runtime}} mins
                     </span>
 
-                    <circle-progress [percent]="vote" [radius]="50" [outerStrokeWidth]="4" [innerStrokeWidth]="2" [outerStrokeColor]="'#FF2901'" [innerStrokeColor]="'#2F2F31'" [animation]="true" [subtitle]="'Audience Score'" [showSubtitle]="true" [animationDuration]="300">
+                    <circle-progress [percent]="vote" [radius]="50" [outerStrokeWidth]="8" [innerStrokeWidth]="4" [outerStrokeColor]="'#FF2901'" [innerStrokeColor]="'#2F2F31'" [animation]="true" [animationDuration]="1000" [subtitle]="'Audience Score'" [showSubtitle]="true"
+                        [animationDuration]="300">
                     </circle-progress>
                     <span class="feature">
                         Budget: {{movieDetails.budget | currency: 'USD':'symbol-narrow':'4.2-2' }}

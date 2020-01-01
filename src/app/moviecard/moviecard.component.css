@@ -14,10 +14,10 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
-.movie-card {
+.movie-card-link {
     position: relative;
     width: 15%;
     height: 50vh;
@@ -26,13 +26,8 @@
     transition: 500ms ease-in-out;
 }
 
-fa-icon {
-    cursor: pointer;
-    color: #fff;
-}
-
-fa-icon:hover {
-    color: #ff2901;
+.movie-card {
+    transition: all 500ms;
 }
 
 .movie-card:hover {
@@ -42,11 +37,10 @@ fa-icon:hover {
 .movie-img {
     width: 100%;
     height: 75%;
-    padding-top: 1.5%;
+    padding-top: 2%;
     background-color: #ff2901;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    overflow: hidden;
 }
 
 .movie-img img {
@@ -66,4 +60,13 @@ fa-icon:hover {
 .movie-info p {
     display: flex;
     justify-content: space-between;
+}
+
+fa-icon {
+    cursor: pointer;
+    color: #fff;
+}
+
+fa-icon:hover {
+    color: #ff2901;
 }

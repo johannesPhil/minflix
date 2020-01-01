@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { AuthenticationService } from '../authentication.service';
 import { RxFormBuilder, ReactiveFormConfig, RxwebValidators } from '@rxweb/reactive-form-validators';
 import { User } from './user.model';
 
@@ -19,13 +20,16 @@ export class SignupComponent implements OnInit {
   confirmError: string; */
 
   constructor(
-    private formBuilder: RxFormBuilder
+    private formBuilder: RxFormBuilder,
+    
     ) { }
+
 
   ngOnInit() {
     const user = new User();
 
     this.signUpForm = this.formBuilder.formGroup(user);
+
 
     /* this.signUp = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(2)]],

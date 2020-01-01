@@ -20,6 +20,7 @@ import { MovieinfoComponent } from './movieinfo/movieinfo.component';
 import { AccountComponent } from './account/account.component';
 import { HomeComponent } from './home/home.component';
 import { FavouriteComponent } from './favourite/favourite.component';
+import {NgCircleProgressModule} from 'ng-circle-progress';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,10 @@ import { FavouriteComponent } from './favourite/favourite.component';
     RxReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig, 'minflix'),
     AngularFirestoreModule, // Only required for database features
-    AngularFireStorageModule // Only required for storage features
+    AngularFireStorageModule, // Only required for storage features
+    NgCircleProgressModule.forRoot({
+    
+    })
   ],
   providers: [AuthenticationService],
   // tslint:disable-next-line: max-line-length

@@ -1,8 +1,11 @@
-nav{
-    position:fixed;
+nav {
+    position: fixed;
     width: 100%;
-    height: 8vh;
-    padding: 0 5%;
+    /* height: 8vh; */
+    padding: 1% 5%;
+    top: 0;
+    left: 0;
+    margin: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -10,29 +13,32 @@ nav{
     background-color: #040707;
     color: #fff;
     font-family: 'Roboto';
-    z-index: 2;
+    z-index: 1;
 }
 
-#left{
+#left {
     display: flex;
     align-items: center;
 }
 
-#logo{
+#logo {
     font-size: 3em;
 }
 
-.min{
+.min {
     color: teal;
 }
-.flix{
+
+.flix {
     color: #fff;
 }
-#mini, #full{
+
+#mini,
+#full {
     color: #3b3c36;
 }
 
-form[name=search]{
+form[name=search] {
     width: 30vw;
     height: 4vh;
     margin: 0 5%;
@@ -45,7 +51,7 @@ form[name=search]{
     border-radius: 20px;
 }
 
-input[type=text]{
+input[type=text] {
     width: 85%;
     height: inherit;
     padding-left: 10px;
@@ -55,30 +61,31 @@ input[type=text]{
     transition: ease-in-out 500ms;
 }
 
-input[type=text]:focus{
+input[type=text]:focus {
     background-color: teal;
 }
 
-::placeholder{
+::placeholder {
     color: #fff;
 }
-:focus{
+
+:focus {
     outline: none;
 }
 
-button[type=submit]{
+button[type=submit] {
     width: 15%;
-    height:1.8em;
+    height: 1.8em;
     color: #fff;
     background-color: transparent;
     border: none;
 }
 
-a.home-link{
+a.home-link {
     text-decoration: none;
 }
 
-a#signin-link{
+a#signin-link {
     display: flex;
     align-items: center;
     width: auto;
@@ -92,31 +99,31 @@ a#signin-link{
     transition: ease-in-out 500ms;
 }
 
-a#signin-link:hover{
+a#signin-link:hover {
     background-color: #fff;
     color: teal;
 }
 
-@media screen and (min-width: 320px){
-    #full{
+@media screen and (min-width: 320px) {
+    #full {
         display: none;
     }
-    #mini{
+    #mini {
         display: block;
     }
-    input[type=text]{
+    input[type=text] {
         font-size: 0.9em;
     }
 }
 
-@media screen and (min-width: 768px){
-    #mini{
+@media screen and (min-width: 768px) {
+    #mini {
         display: none;
     }
-    #full{
+    #full {
         display: block;
     }
-    input[type=text]{
-        font-size:1.2em; 
+    input[type=text] {
+        font-size: 1.2em;
     }
 }

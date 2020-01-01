@@ -1,1 +1,28 @@
-<p>movieinfo works!</p>
+<main>
+    <div id="background" [style.background-image]="'url(http://image.tmdb.org/t/p/w780/' + movieDetails.backdrop_path + ')'" [style.background-size]="'cover'">
+        <section class="movie_info">
+            <div class="img_content">
+                <img src="http://image.tmdb.org/t/p/w780/{{movieDetails.poster_path}}" alt="Poster image for {{movieDetails.original_title}}">
+            </div>
+            <div class="movie_info_content">
+                <h2>{{movieDetails.title}} ({{movieDetails.release_date |date: 'yyyy' }})</h2>
+                <h3>Overview</h3>
+                <p>{{movieDetails.overview}}</p>
+                <div class="features">
+                    <span class="feature">
+                        Runtime: {{movieDetails.runtime}} mins
+                    </span>
+
+                    <circle-progress [percent]="vote" [radius]="50" [outerStrokeWidth]="4" [innerStrokeWidth]="2" [outerStrokeColor]="'#FF2901'" [innerStrokeColor]="'#2F2F31'" [animation]="true" [subtitle]="'Audience Score'" [showSubtitle]="true" [animationDuration]="300">
+                    </circle-progress>
+                    <span class="feature">
+                        Budget: {{movieDetails.budget | currency: 'USD':'symbol-narrow':'4.2-2' }}
+                    </span>
+                    <span class="feature">
+                        Language(s): {{movieDetails.spoken_languages[0].name}}
+                    </span>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>

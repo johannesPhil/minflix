@@ -17,8 +17,8 @@ export class MoviecardComponent implements OnInit {
   ngOnInit() {
 
     this.apiService.getMovie().subscribe((data) => {
-      console.log(data['results']);
       this.movies = data['results'];
+      console.log(this.movies);
     });
   }
 

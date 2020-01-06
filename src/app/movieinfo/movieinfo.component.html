@@ -9,19 +9,15 @@
                 <h3>Overview</h3>
                 <p>{{movieDetails.overview}}</p>
                 <div class="features">
-                    <span class="feature">
+                    <div class="feature">
                         Runtime: {{movieDetails.runtime}} mins
-                    </span>
+                    </div>
 
-                    <circle-progress class="feature" [percent]="vote" [radius]="50" [outerStrokeWidth]="8" [innerStrokeWidth]="4" [outerStrokeColor]="'#FF2901'" [innerStrokeColor]="'#2F2F31'" [animation]="true" [animationDuration]="1000" [subtitle]="'Audience Score'" [showSubtitle]="true"
-                        [animationDuration]="300">
+                    <circle-progress class="feature" [percent]="vote" [outerStrokeColor]="'#FF2901'" [innerStrokeColor]="'#2F2F31'" [animation]="true" [animationDuration]="1000" [subtitle]="'Score'" [showSubtitle]="true" [animationDuration]="300">
                     </circle-progress>
-                    <span class="feature">
+                    <div class="feature">
                         Budget: {{movieDetails.budget | currency: 'USD':'symbol-narrow':'4.2-2' }}
-                    </span>
-                    <span class="feature">
-                        Language(s): {{movieDetails.spoken_languages[0].name}}
-                    </span>
+                    </div>
                 </div>
             </div>
         </section>

@@ -1,10 +1,20 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
 #background {
     position: relative;
-    height: auto;
+    display: block;
+    min-height: 100vh;
     width: 100%;
     overflow: auto;
     background-repeat: no-repeat;
-    padding: 8%;
+    padding-top: 5em;
 }
 
 #background::before {
@@ -26,7 +36,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     font-size: 1.2em;
     color: #fff;
 }
@@ -42,7 +52,7 @@
 }
 
 .movie_info_content {
-    width: 500px;
+    width: 300px;
     height: auto;
     margin: 0;
     display: flex;
@@ -54,14 +64,17 @@ p {
 }
 
 .features {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    flex: 1 1 auto;
     font-size: .8em;
 }
 
 .feature {
+    display: block;
+    width: auto;
+    flex: 1 1 auto;
     margin: 2%;
 }

@@ -46,10 +46,14 @@ import {NgCircleProgressModule} from 'ng-circle-progress';
     AngularFirestoreModule, // Only required for database features
     AngularFireStorageModule, // Only required for storage features
     NgCircleProgressModule.forRoot({
+      innerStrokeWidth: 1,
+      outerStrokeWidth: 6,
+      space: 0,
       titleColor: "#fff",
       subtitleColor: "#ff2901",
       titleFontWeight: "bold",
-      subtitleFontWeight: "bold"
+      subtitleFontWeight: "bold",
+      radius: 30,
     })
   ],
   providers: [AuthenticationService],

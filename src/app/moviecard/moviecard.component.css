@@ -20,7 +20,7 @@
 .movie-card-link {
     position: relative;
     display: block;
-    width: 200px;
+    width: 100px;
     height: auto;
     flex: 1 1 auto;
     margin: 30px 20px;

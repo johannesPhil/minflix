@@ -5,9 +5,6 @@
                 <img src="http://image.tmdb.org/t/p/w780/{{movieDetails.poster_path}}" alt="Poster image for {{movieDetails.original_title}}">
             </div>
             <div class="movie_info_content">
-                <h2>{{movieDetails.title}} ({{movieDetails.release_date |date: 'yyyy' }})</h2>
-                <h3>Overview</h3>
-                <p>{{movieDetails.overview}}</p>
                 <div class="features">
                     <div class="feature">
                         Runtime: {{movieDetails.runtime}} mins
@@ -19,6 +16,10 @@
                         Budget: {{movieDetails.budget | currency: 'USD':'symbol-narrow':'4.2-2' }}
                     </div>
                 </div>
+                <h2>{{movieDetails.title}} ({{movieDetails.release_date |date: 'yyyy' }})</h2>
+                <h3>Overview</h3>
+                <p>{{movieDetails.overview}}</p>
+
             </div>
         </section>
     </div>

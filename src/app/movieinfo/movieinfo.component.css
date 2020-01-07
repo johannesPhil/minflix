@@ -52,7 +52,7 @@ body {
 }
 
 .movie_info_content {
-    width: 300px;
+    max-width: 400px;
     height: auto;
     margin: 0;
     display: flex;
@@ -60,6 +60,7 @@ body {
 }
 
 p {
+    margin: 0;
     line-height: 1.5em;
 }
 

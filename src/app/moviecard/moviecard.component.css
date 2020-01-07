@@ -81,7 +81,7 @@ fa-icon:hover {
 
 @media screen and (min-width: 720px) {
     .movie-card-link {
-        width: 180px;
+        width: 120px;
         margin: 20px 10px;
     }
 }
